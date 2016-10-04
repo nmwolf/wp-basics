@@ -1,7 +1,7 @@
-### E-Lab Notebooks and Other Tools for Project Management
+### Extracting and Managing Text and Data Using OCR
 
 #### Description
-This course will introduce researchers to two helpful tools for documenting projects conducted in the lab, field, or archives. Open Science Framework is a fully integrated, open-source desktop tool for documenting and organizing files. IPython is a web-based platform for organizing and sharing code.
+This course offers an introduction to extracting and organizing textual and tabular data using the Optical Character Recognition (OCR) softwares Tesseract and ABBYY FineReader. Use of OCR can significantly cut down on data entry and enables digital analysis of non-digital materials.
 
 #### Topics 
-Open Science Framework, iPython/Jupyter notebooks
+Using ABBYY FineReader
