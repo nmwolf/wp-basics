@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>E-Lab Notebooks and Other Tools for Project Management</title>
+		<title>Extracting Text and Data from Files Using OCR</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/simple.css">
@@ -29,10 +29,10 @@
 				
 				<!--SLIDE 1-->
 				<section>
-					<h2>E-Lab Notebooks and Other Tools for Project Management</h2><br/>
+					<h2>Extracting Text and Data from Files Using OCR</h2><br/>
 					
-					<p>Vicky Steeves and Nick Wolf | September 20, 2016 </p>
-
+					<div class="title-page"><p>Vicky Steeves and Nick Wolf | October 4, 2016</p></div>
+					
 					<img src="imgs/dataservices.png" width="30%" height="30%" align="middle"><br/>
 					
 					<div class='footer'>
@@ -45,117 +45,122 @@
 				
 				<!--SLIDE 2-->
 				<section>
-					<h3>Benefits and Challenges to Managing and Documenting Project Workflow</h3>
+					<h3>What is OCR and What Can We Do with It?</h3>
 					<ul>
-					<li>Enable group collaboration while tracking contributions and controlling access</li>
-					<li>Keep track of master copies of files as well as versions and backups</li>
-					<li>Gather bird's eye views of resource allocation and time usage</li>
-					<li>Allow for simultaneous preparation for data publishing and preservation</li>
+					<li>OCR = Optical Character Recognition</li>
+					<li>A system that analyzes an image of a writing glyph-by-glyph and turns it into a document of machine-readable characters</li>
+					<li>High-performing OCR depends on machine-learning: you supervise your computer in recognizing images of characters—including unusual fonts, non-English language texts, etc.</li>
+					<li>Many options, but for highest accuracy (especially on older documents) use ABBYY or Tesseract</li>
 					</ul>				
 				</section> 
 									
 				<!--SLIDE 3-->
 				<section>
-					<h3>What to Look for in E-Lab Notebooks and Workflow Tool Benches</h3>
+					<h3>What is OCR and What Can We Do with It?</h3>
 					<ul>
-					<li>Web-hosted vs. Self-Host vs. Desktop Environments</li>
-					<li>Grant and Project Management Tools vs. File and Research Management vs. Experiment/"Research Process" Management</li>
-					<li>Cost/License Products vs. Closed-Source Free Options vs. Open Source/Open Access</li>
+					<li>Use it to turn documents into machine-readable texts</li>
+					<li>Significantly reduce transcribing and typing</li>
+					<li>Build personal digital archives/libraries for advanced text mining and other digital methods projects</li>
 					</ul>	
 				</section>
-				<!--SLIDE 3.5-->
-				<section>
-					<h3>What to Look for in E-Lab Notebooks and Workflow Tool Benches</h3>
-					<br/><p>Whatever option you choose...</p>
-					<h3>...beware of lab notebooks and tools that do not allow you to export your data!</h3>
-					<p>If this software/tool provider disappears, you need to maintain access to your data.</p>
-				</section>
-
+				
 				<!--SLIDE 4-->
 				<section>
-					<h3>Some Free/Low-Cost Examples</h3>
+					<h3>Option One (the free option): Tesseract</h3>
 					<ul>
-					<li><a href="http://www.labguru.com/" target="_blank">Labguru</a> (free for single user, cost for group)</li>
-    				<li><a href="//www.bioraft.com/" target="_blank">Bioraft</a> (institutional/departmental setup, cost for setup)</li>
-    				<li><a href="http://www.elabftw.net/" target="_blank">eLabFTW</a> (free and open source, deploy on user server)</li>
-    				<li><a href="http://mylabbook.org/index.php" target="_blanke">MyLabBook</a> (in development, Drupal-based open-source local deployment)</li>
-    				<li><a href="https://projectredcap.org/" target="_blank">REDCap</a> (closed source, deploy on user server)</li>
-    				<li><a href="https://benchling.com/academic" target="_blank">Benchling</a> (free for academic use, web-based platform)</li>
-					</ul>
-					<br/><p>Check out our <a href="http://guides.nyu.edu/data_management/documenting_data" target=_blank">LibGuide</a> or consult this <a href="http://www.limswiki.org/index.php/ELN_vendor" target=_blank">longer list</a> of providers.</p>
+					<li>Download it <a href="https://github.com/tesseract-ocr/tesseract">here</a></li>
+					<li>Runs in the command line, but don't be intimidated...after install, basic command is: <pre>tesseract input-image-location output-text-location</pre></li>
+    				<li>Training must also be done through command line, and that is a little harder. See tutorial <a href+https://github.com/tesseract-ocr/tesseract/wiki/TrainingTesseract">here</a>.</li>
+					</ul><br/><br/>
+					<img src="imgs/ocr.png" width="80%"/>
 				</section>
 				
 				<!--SLIDE 5-->
 				<section>
-					<h2>What is the Open Science Framework?</h2>
-					
-					<img src="imgs/osfDiagram.png" width="50%" height="50%" style="float:right; margin-left:0.5em;"><br/>
-					
-					<p>A free and open source project management tool that connects researchers to the tools they are already using to make management easier through the research cycle.</p><br/>
-					
+				<img src="imgs/abbyy.jpg" width="15%" height="15%" style="float:right; margin-left:0.5em;">
+					<h2>Option Two: ABBYY FineReader</h2>					
+					<p>Basic specs:</p>
+					<ul>
+					<li>Mac and Windows versions. Currently, Windows interface much better.</li>
+					<li>30-day Trial License Available (great for one-off projects)</li>
+					<li><a href="https://www.abbyy.com/en-us/finereader/professional/for-education/">Discount license</a> ($118.99 currently) for teachers/students/researchers</li>
+					<li>Two Mac versions on scanner computer stations in Digital Studio at Bobst; free-trial version in Data Services lab, hopefully full license coming soon.</li>
+					</ul><br/><br/>
+					<br/>
 					<div class='footer'>
 					</div>
-				</section>	
-				<!--SLIDE 6-->
-				<section>
-						<h2>Why Use OSF?</h2>
-						
-						<p><ul>
-						<li>Preserve your current workflow, file types, and standard operating procedures</li>
-						<li>Enhance those workflows by better documentation, sharing, and discovery of your research materials</li>
-						<li>Gather together group permissions, various storage options, bibliographic management, and publication in one place</li>
-						<li>OSF is the work of a non-profit, the Center for Open Science, dedicated to supporting open science using open-source tools</li>
-						<div class='footer'>
-					</div>	
 				</section>
-				<!-- SLIDE 7-->
+				<!--SLIDE 8=6-->
 				<section>
-						<h2>OSF Integrations with Research Tools</h2>
-						
-						<img src="imgs/osfConnections.png" width="70%" height="70%">
-						
-						<div class='footer'>
-					</div>	
-				</section>
-				<!--SLIDE 8-->
-				<section>
-					<h2>Getting Started: OSF at NYU</h2>
-					
-					<p>Sign up at <a href="http://osf.io/">osf.io</a> using your NetID and create your account. <br/>Click on "Sign In" and at the bottom of the sign-in box, the link for "Login Through Your Institution."</p>
-					
-					<img src="imgs/osf-institution-signin.png" width="40%" height="40%">
-					
+					<h2>ABBYY Tutorial Materials</h2>
+					<ol>
+					<li>Login to your NYU E-mail/Home/Drive Account</li>
+					<li>Download <a href="https://drive.google.com/a/nyu.edu/file/d/0Bz9LVQAqjIjLTVhkZnZLNHg2NTA/view?usp=sharing">this document</a> and save it somewhere on the system where you can find it.</li>
+					</ol>
 					<div class='footer'>
+					</div>	
+				</section>	
+				<!--SLIDE 7-->
+				<section>
+						<h2>Step One: Load Document</h2>
+						<p>Generally, select "Image or PDF File to Other Formats"</p>
+						<img src="imgs/OCR-Tutorial/tutorial-img-1.PNG" width="80%">
+
+						<div class='footer'>
+					</div>	
+				</section>
+				<!-- SLIDE 8-->
+				<section>
+						<h2>Step Two: Initial Pass by ABBYY</h2>
+						<p>Hands off! Let ABBYY try to recognize every page first</p> 
+						<img src="imgs/OCR-Tutorial/tutorial-img-2.PNG" width="80%">
+						
+						<div class='footer'>
 					</div>	
 				</section>
 				<!--SLIDE 9-->
 				<section>
-					<h2>Setting Up a Project</h2>
+					<h2>Step Three: The Windows FineReader Dashboard</h2>
 					
-					<p class="fragment" data-fragment-index="1">Go to <a href="https://osf.io">https://osf.io</a> or just click "My Projects" on the top bar. <img src="imgs/osfBar.png" width="90%" height="90%"></p>
+					<p>When asked if you want to save, select no...we need to refine the output considerably.</p>
 					
-					<p class="fragment" data-fragment-index="2">Click "Create Project" and fill in the form. <img src="imgs/osfCreateProject.png" width="90%" height="90%"></p>
+					<img src="imgs/OCR-Tutorial/tutorial-img-3-1.PNG" width="80%">
 					
+					<div class='footer'>
+					</div>	
+				</section>
+				<!--SLIDE 10-->
+				<section>
+					<h2>Text Area Types</h2>
+					
+					<ul>
+					<li>Text Area (light green)</li>
+					<li>Picture Area (red)</li>
+					<li>Table Area (blue)</li>
+					</ul>					
 					<div class='footer'>
 					</div>
 				</section>
 				
-				<!--SLIDE 10-->
+				<!--SLIDE 11-->
 				<section>
-					<h2>Don't Be Afraid of How Blank It Looks...</h2>
-					
-					<img src="imgs/osfBlank.png" width="90%" height="90%">
-					
+					<h2>Step Four: Best Workflow Order of Operations</h2>
+					<ol>
+					<li>Work page by page to first <strong>DELETE</strong> all unwanted text/picture/table areas.</li>
+					<li><strong>ADJUST</strong> size of current areas to capture anything on the page, preserving the original text/picture/table box.</li>
+					<p>Why? Order matters! The output text will follow the order of text/picture/table boxes in first window. Any boxes you add get tacked on to end of page. So preserve the naturally created order of boxes first, deleting and editing what is already there</p>
+					<li><strong>ADD</strong> text areas as needed, adjust order</li>
+					</ol>
 					<div class='footer'>
 					</div>
 				</section>
-				<!--SLIDE 11-->						
+				<!--SLIDE 12-->						
 				<section>
-					<h2>Let's Add Collaborators</h2>
+					<h2>Step Four: Best Workflow Order of Operations</h2>
 					
-					<p class="fragment" data-fragment-index="1">Click "add" button next to the title of the page. <img src="imgs/osfCollabs.png" width="60%" height="60%"></p>
-					<p class="fragment" data-fragment-index="2">Search for the person to your right and add them.<img src="imgs/osfCollabs1.png" width="60%" height="60%"></p>
-					
+					<ol>
+					<li>
+					</ol>
 					<div class='footer'>
 					</div>
 				</section>
