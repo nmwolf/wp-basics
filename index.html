@@ -176,24 +176,206 @@
 					</div>
 				</section>
 				<!--SLIDE 14-->
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Extracting Text and Data from Files Using OCR</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<!--SLIDE 1-->
+				<section>
+					<h2>Using OCR to Build a Digital Humanities Corpus</h2><br/>
+					
+					<div class="title-page"><p>Nick Wolf | February 7, 2017</p></div>
+					
+					<img src="imgs/dataservices.png" width="30%" height="30%" align="middle"><br/>
+					
+					<div class='footer'>
+						<hr/>
+						<p>Nick's ORCID: <a href="http://orcid.org/0000-0001-5512-6151">0000-0001-5512-6151</a><br/>
+						This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+					</div>
+				</section>
+				
+				
+				<!--SLIDE 2-->
+				<section>
+					<h3>What is OCR and What Can We Do with It?</h3>
+					<ul>
+					<li>OCR = Optical Character Recognition</li>
+					<li>A system that analyzes an image of a writing glyph-by-glyph and turns it into a document of machine-readable characters</li>
+					<li>High-performing OCR depends on machine-learning: you supervise your computer in recognizing images of characters—including unusual fonts, non-English language texts, etc.</li>
+					<li>Many options, but for highest accuracy (especially on older documents) use ABBYY or Tesseract</li>
+					</ul>				
+				</section> 
+									
+				<!--SLIDE 3-->
+				<section>
+					<h3>What is OCR and What Can We Do with It?</h3>
+					<ul>
+					<li>Aim is to produce a machine-readable file, whether plain text or html/xml (if possible, with bounding boxes)</li>
+					<li>Preserve metadata elements important to DH inquiry (e.g. document structural elements, like page number)</li>
+					<li>Preserve textual ornamentation (e.g. bold, italics, indents, capitalization) that may assist with identifying word tokens</li>
+					</ul>	
+				</section>
+				<!-- SLIDE 4-->
+				<section>
+					<h3>Input Formats</h3>
+					<ul>
+					<li>PDF or Tiff. For Tesseract, Tiff only.</li>
+					<li>Input images at 300dpi with good contrast.</li>
+					</ul>	
+				</section>
+				
+				<!--SLIDE 4-->
+				<section>
+				<img src="imgs/abbyy.jpg" width="15%" height="15%" style="float:right; margin-left:0.5em;">
+					<h2>Option One: ABBYY FineReader</h2>					
+					<p>Basic specs:</p>
+					<ul>
+					<li>Mac and Windows versions. Currently, Windows interface much better.</li>
+					<li>30-day Trial License Available (great for one-off projects)</li>
+					<li><a href="https://www.abbyy.com/en-us/finereader/professional/for-education/">Discount license</a> ($118.99 currently) for teachers/students/researchers</li>
+					<li>Two Mac versions on scanner computer stations in Digital Studio at Bobst; licensed version here in 617, trial version in 5th-Floor Research Commons labs.</li>
+					</ul><br/><br/>
+					<br/>
+					<div class='footer'>
+					</div>
+				</section>
+				<!--SLIDE 8=6-->
+				<section>
+					<h2>ABBYY Tutorial Materials</h2>
+					<ol>
+					<li>Login to your NYU E-mail/Home/Drive Account</li>
+					<li>Download <a href="https://drive.google.com/a/nyu.edu/file/d/0Bz9LVQAqjIjLTVhkZnZLNHg2NTA/view?usp=sharing">this document</a> and save it somewhere on the system where you can find it.</li>
+					<li>FYI: Best resolution for OCR is 300 dpi</li>
+					</ol>
+					<div class='footer'>
+					</div>	
+				</section>	
+				<!--SLIDE 7-->
+				<section>
+						<h2>Step One: Load Document</h2>
+						<p>Generally, select "Image or PDF File to Other Formats"</p>
+						<img src="imgs/OCR-Tutorial/tutorial-img-1.PNG" width="80%">
+
+						<div class='footer'>
+					</div>	
+				</section>
+				<!-- SLIDE 8-->
+				<section>
+						<h2>Step Two: Initial Pass by ABBYY</h2>
+						<p>Hands off! Let ABBYY try to recognize every page first</p> 
+						<img src="imgs/OCR-Tutorial/tutorial-img-2.PNG" width="80%">
+						
+						<div class='footer'>
+					</div>	
+				</section>
+				<!--SLIDE 9-->
+				<section>
+					<h2>Step Three: The Windows FineReader Dashboard</h2>
+					
+					<p>When asked if you want to save, select no...we need to refine the output considerably.</p>
+					
+					<img src="imgs/OCR-Tutorial/tutorial-img-3-1.PNG" width="80%">
+					
+					<div class='footer'>
+					</div>	
+				</section>
+				<!--SLIDE 10-->
+				<section>
+					<h2>Text Area Types</h2>
+					
+					<ul>
+					<li>Text Area (light green)</li>
+					<li>Picture Area (red)</li>
+					<li>Table Area (blue)</li>
+					</ul>					
+					<div class='footer'>
+					</div>
+				</section>
+				
+				<!--SLIDE 11-->
+				<section>
+					<h2>Step Four: Best Workflow Order of Operations</h2>
+					<ol>
+					<li>Work page by page to first <strong>DELETE</strong> all unwanted text/picture/table areas.</li>
+					<li><strong>ADJUST</strong> size of current areas to capture anything on the page, preserving the original text/picture/table box.</li>
+					<p>Why? Order matters! The output text will follow the order of text/picture/table boxes in first window. Any boxes you add get tacked on to end of page. So preserve the naturally created order of boxes first, deleting and editing what is already there</p>
+					<li><strong>ADD</strong> text areas as needed, adjust order</li>
+					</ol>
+					<div class='footer'>
+					</div>
+				</section>
+				<!--SLIDE 12-->						
+				<section>
+					<h2>Step Four: Best Workflow Order of Operations</h2>
+
+					<p>4. Click "Read" on top menu from time to time to generate a new output text. This allows ABBYY to continue to use its embedded tools to guess at words</p>
+					<p>5. Use the bottom detail window to adjust location of row and columns in tables. Select your table area using selection pointer, then click on table row/column line to delete, add, or move separators.</p>
+					<p>6. Implement the pattern trainer by following the "Creating and Training a User Pattern Tutorial <a href="http://help.abbyy.com/FineReader/FineReader12/English/ImproveResults/OrnateType.htm">here</a></p>
+					
+					<div class='footer'>
+					</div>
+				</section>
+				<!--SLIDE 13-->						
+				<section>
+					<h2>Step Four: Best Workflow Order of Operations</h2>
+
+					<p>7. <strong>FINALLY</strong> you may want to walk through the righthand text editor window and correct mistakes in blue. However, note that ABBYY marks in blue things that are wrong and things that might be wrong. <strong>Don't waste time eliminating blue markup.</strong></p>
+					
+					<div class='footer'>
+					</div>
+				</section>
+				<!--SLIDE 14-->
 				<section>
 					<h2>Step Five: Save and Export</h2>
 					<ol>					
 					<li>Save the ABBYY project bundle. Go to FILE >> Save FineReader Document and save the project form time to time.</li>
 					<li>When ready to export, hit the "Save" icon at top menu bar and select out put format. Note also the dropdown options under the "Document Layout" section. Opt in or out to keep things like pictures, page numbers, headers, footers, line breaks, hyphens.</li>
-					<li>Best options: RTF (if you want the exact layout on the page, including whitespace like tabs) or TXT (if you just want text and line breaks).</li>
+					<li>Best options: RTF (if you want the exact layout on the page, especially line breaks) or TXT (if you just want text and line breaks).
 					
 					</ol>		
 					<div class='footer'>
 					</div>
 				</section>
-
-
+				<section>
+					<h3>Option Two (the free option): Tesseract</h3>
+					<ul>
+					<li>Download it <a href="https://github.com/tesseract-ocr/tesseract">here</a></li>
+					<li>Runs in the command line, but don't be intimidated...after install, basic command is: <pre>tesseract input-image-location output-text-location</pre></li>
+    					<li>Training must also be done through command line, and that is a little harder. See tutorial at <a href="https://github.com/tesseract-ocr/tesseract/wiki/TrainingTesseract">https://github.com/tesseract-ocr/tesseract/wiki/TrainingTesseract</a>.</li>
+					</ul><br/><br/>
+					<img src="imgs/ocr.png" width="80%"/>
+				</section>
 				<!-- CONCLUSION SLIDE -->
 				<section>
 					<h2>Happy OCRing. Questions?</h2><br/>
 					
-					<p>Email us: <a href="mailto:victoria.steeves@nyu.edu">victoria.steeves@nyu.edu</a> & <a href="mailto:nicholas.wolf@nyu.edu">nicholas.wolf@nyu.edu</a></p>
+					<p>Email us: <a href="mailto:vicky.steeves@nyu.edu">vicky.steeves@nyu.edu</a> & <a href="mailto:nicholas.wolf@nyu.edu">nicholas.wolf@nyu.edu</a></p>
 					<p>Learn more about RDM: <a href="http://guides.nyu.edu/data_management">guides.nyu.edu/data_management</a></p>
 
 					<p>Get this presentation: <a href="http://guides.nyu.edu/data_management/resources">guides.nyu.edu/data_management/resources</a></p>
