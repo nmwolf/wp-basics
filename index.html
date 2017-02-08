@@ -31,7 +31,7 @@
 				<section>
 					<h2>Using OCR to Build a Digital Humanities Corpus</h2><br/>
 					
-					<div class="title-page"><p>Nick Wolf | February 7, 2017</p></div>
+					<div class="title-page"><p>Nick Wolf | February 8, 2017</p><p>Get this presentation: <a href="https://tinyurl.com/dhweek2017-ocr">https://tinyurl.com/dhweek2017-ocr</a></div>
 					
 					<img src="imgs/dataservices.png" width="30%" height="30%" align="middle"><br/>
 					
@@ -39,7 +39,7 @@
 						<hr/>
 						<p>Nick's ORCID: <a href="http://orcid.org/0000-0001-5512-6151">0000-0001-5512-6151</a><br/>
 						This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
-					</div>
+                                        </div>
 				</section>
 				
 				
@@ -74,7 +74,7 @@
 				
 				<section>
 					<h3>Test Materials</h3>
-					Download as a zip <a href="https://drive.google.com/drive/folders/0Bz9LVQAqjIjLRzVrVzdzeVdxZGc?usp=sharing">this shared folder</a> with the following files.
+					Download as a zip <a href="https://drive.google.com/drive/folders/0Bz9LVQAqjIjLRzVrVzdzeVdxZGc?usp=sharing" target="_blank">this shared folder</a> with the following files.
 					<ul>
 					<li><code>nypl-twain-typescript.jpg</code> : A page from Mark Twain's <em>Autobiographical Account of a Stay in England</em>, <a href="https://digitalcollections.nypl.org/items/aa17bbe0-e436-0131-e2a6-58d385a7b928">available at NYPL</a>.</li>
 					<li><code>masses079.pdf</code> : An issue of <em>The Masses</em> (1917), a periodical available in NYU's <a href="http://dlib.nyu.edu/themasses/books/masses079/">digital library holdings</a>.
@@ -188,13 +188,24 @@
 					</div>
 				</section>
 				<section>
-					<h3>Option Two (the free option): Tesseract</h3>
+					<h3>Option Two (the free option): Tesseract 3.x</h3>
 					<ul>
-					<li>Download it <a href="https://github.com/tesseract-ocr/tesseract">here</a></li>
-					<li>Runs in the command line, but don't be intimidated...after install, basic command is: <pre>tesseract input-image-location output-text-location</pre></li>
-    					<li>Training must also be done through command line, and that is a little harder. See tutorial at <a href="https://github.com/tesseract-ocr/tesseract/wiki/TrainingTesseract">https://github.com/tesseract-ocr/tesseract/wiki/TrainingTesseract</a>.</li>
+					<li>Find documentation at <a href="https://github.com/tesseract-ocr/tesseract">here</a></li>
+					<li>Install by first loading <a href="http://brew.sh">Homebrew</a> on Mac (if you don't have it already). From terminal, type: <code>/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code></li>
+					<li>Then type: <code>brew install tesseract</code></li>
+					<li>Works on .tiff (uncompressed) files. Use tools like <a href="https://www.imagemagick.org/script/index.php">ImageMagick</a> and <a href="https://www.ghostscript.com/">Ghostscript</a> to make conversions.</li>
 					</ul><br/><br/>
 					<img src="imgs/ocr.png" width="80%"/>
+				</section>
+				<section>
+					<h3>Running Tesseract</h3>
+					<ul>
+					<li>Runs in the command line, but don't be intimidated...basic command is: <code>tesseract input-image-location output-text-location</code></li>
+    					<li>To output to an html file with bounding boxes, use <code>tesseract input-image-location output-text-location hocr</code></li>
+					<li>Batch OCR: <code>for item in *.tif; do tesseract $item output_folder_name/$item; done</code>
+					<li>For more help, checkout this <a href="https://hdw.artsci.wustl.edu/articles/154">tutorial</a> from Washington University St. Louis</li>
+					<li>Training must also be done through command line, and that is a little harder. See tutorial at <a href="https://github.com/tesseract-ocr/tesseract/wiki/TrainingTesseract">https://github.com/tesseract-ocr/tesseract/wiki/TrainingTesseract</a>.</li>
+					</ul>
 				</section>
 				<!-- CONCLUSION SLIDE -->
 				<section>
