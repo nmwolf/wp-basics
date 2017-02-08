@@ -31,7 +31,7 @@
 				<section>
 					<h2>Using OCR to Build a Digital Humanities Corpus</h2><br/>
 					
-					<div class="title-page"><p>Nick Wolf | February 7, 2017</p></div>
+					<div class="title-page"><p>Nick Wolf | February 7, 2017</p><p>Get this presentation: <a href="https://tinyurl.com/dhweek2017-ocr">https://tinyurl.com/dhweek2017-ocr</a></div>
 					
 					<img src="imgs/dataservices.png" width="30%" height="30%" align="middle"><br/>
 					
@@ -68,7 +68,7 @@
 					<h3>Input Formats</h3>
 					<ul>
 					<li>PDF or Tiff. For Tesseract, Tiff only.</li>
-					<li>Input images at 300dpi with good contrast.</li>
+					<li>Input images at least 300dpi with good contrast.</li>
 					</ul>	
 				</section>
 				
@@ -187,12 +187,21 @@
 				<section>
 					<h3>Option Two (the free option): Tesseract</h3>
 					<ul>
-					<li>Download it <a href="https://github.com/tesseract-ocr/tesseract">here</a></li>
-					<li>Runs in the command line, but don't be intimidated...after install, basic command is: <pre>tesseract input-image-location output-text-location</pre></li>
-    					<li>Training must also be done through command line, and that is a little harder. See tutorial at <a href="https://github.com/tesseract-ocr/tesseract/wiki/TrainingTesseract">https://github.com/tesseract-ocr/tesseract/wiki/TrainingTesseract</a>.</li>
+					<li>Find documentation at <a href="https://github.com/tesseract-ocr/tesseract">here</a></li>
+					<li>Install by first loading <a href="http://brew.sh">Homebrew</a> on Mac (if you don't have it already). From terminal, type: <code>/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code></li>
+					<li>Then type: <code>brew install tesseract</code></li>
+					<li>Works on .tiff (uncompressed) files. Use tools like <a href="https://www.imagemagick.org/script/index.php">ImageMagick</a> and <a href="https://www.ghostscript.com/">Ghostscript</a> to make conversions.</li>
 					</ul><br/><br/>
 					<img src="imgs/ocr.png" width="80%"/>
 				</section>
+				<section>
+					<h3>Running Tesseract</h3>
+					<ul>
+					<li>Runs in the command line, but don't be intimidated...basic command is: <code>tesseract input-image-location output-text-location</code></li>
+    					<li>To output to an html file with bounding boxes, use <code>tesseract input-image-location output-text-location hocr</code></li>
+					<li>Batch OCR: <code>for item in *.tif; do tesseract $item output_folder_name/$item; done</code>
+					<li>Training must also be done through command line, and that is a little harder. See tutorial at <a href="https://github.com/tesseract-ocr/tesseract/wiki/TrainingTesseract">https://github.com/tesseract-ocr/tesseract/wiki/TrainingTesseract</a>.</li>
+					
 				<!-- CONCLUSION SLIDE -->
 				<section>
 					<h2>Happy OCRing. Questions?</h2><br/>
