@@ -190,8 +190,8 @@
 				<section>
 					<h3>Option Two (the free option): Tesseract 3.x</h3>
 					<ul>
-					<li>Find documentation at <a href="https://github.com/tesseract-ocr/tesseract">here</a></li>
-					<li>Install by first loading <a href="http://brew.sh">Homebrew</a> on Mac (if you don't have it already). From terminal, type: <code>/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code></li>
+					<li>Find documentation <a href="https://github.com/tesseract-ocr/tesseract">here</a></li>
+					<li>Install by first loading <a href="http://brew.sh">Homebrew</a> on Mac (if you don't have it already). From terminal, type: <br/><code>/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code></li>
 					<li>Then type: <code>brew install tesseract</code></li>
 					<li>Works on .tiff (uncompressed) files. Use tools like <a href="https://www.imagemagick.org/script/index.php">ImageMagick</a> and <a href="https://www.ghostscript.com/">Ghostscript</a> to make conversions.</li>
 					</ul><br/><br/>
@@ -202,7 +202,7 @@
 					<ul>
 					<li>Runs in the command line, but don't be intimidated...basic command is: <code>tesseract input-image-location output-text-location</code></li>
     					<li>To output to an html file with bounding boxes, use <code>tesseract input-image-location output-text-location hocr</code></li>
-					<li>Batch OCR: <code>for item in *.tif; do tesseract $item output_folder_name/$item; done</code>
+					<li>Batch OCR: <code>for item in *.tiff; do tesseract $item output_folder_name/$item; done</code>
 					<li>For more help, checkout this <a href="https://hdw.artsci.wustl.edu/articles/154">tutorial</a> from Washington University St. Louis</li>
 					<li>Training must also be done through command line, and that is a little harder. See tutorial at <a href="https://github.com/tesseract-ocr/tesseract/wiki/TrainingTesseract">https://github.com/tesseract-ocr/tesseract/wiki/TrainingTesseract</a>.</li>
 					</ul>
